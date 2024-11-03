@@ -6,114 +6,444 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C201265_Mid</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@500&display=swap"
+        rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .space-grotesk-nr {
+            font-family: "Space Grotesk", sans-serif;
+            font-optical-sizing: auto;
+            /* font-weight: 600; */
+            font-style: normal;
+        }
+    </style>
 </head>
 
 <body>
 
     <header>
-        <nav>
-            <div class="navbar bg-base-100">
-                <div class="flex-1">
-                    <a class="btn btn-ghost text-xl">Positivus</a>
+        <nav class="space-grotesk-nr lg:py-[5%] md:py-[6%] sm:py-[7%] py-[12%] w-[100] bg-[white] flex justify-center items-center">
+            <div
+                class="navbar shadow-[0px_7px_10px_#292A32] bg-[white] 2xl:w-[90%] lg:w-[92%] w-[90%] py-[0.5%] justify-between items-center">
+                <div class="navbar-start xl:w-[22%] w-[16%] lg:mr-[-20%]">
+                    <a
+                        class="btn btn-ghost 2xl:w-[17rem] xl:w-[14rem] lg:w-[9rem] sm:w-[12rem] w-[10rem]">
+                        <img src="desktop/logo-big.png" alt=""
+                            class="w-[100%] xl:mr-[20%] lg:mr-[30%] mr-[20%]">
+                    </a>
                 </div>
-                <div class="flex-none gap-2">
-                    <div class="form-control">
-                        <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
-                    </div>
-                    <div class="dropdown dropdown-end">
-                        <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
-                            <div class="w-10 rounded-full">
-                                <img alt="Tailwind CSS Navbar component"
-                                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                            </div>
-                        </div>
-                        <ul tabindex="0"
-                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li>
-                                <a class="justify-between">
-                                    Profile
-                                    <span class="badge">New</span>
-                                </a>
-                            </li>
-                            <li><a>Settings</a></li>
-                            <li><a>Logout</a></li>
-                        </ul>
+
+                <div class="navbar-end hidden lg:flex xl:w-[71%] w-[84%] justify-between">
+                    <ul
+                        class="menu menu-horizontal leading-[3rem] px-1 2xl:text-[25px] text-[22px] text-[black] 2xl:w-[75%] w-[80%] flex justify-between">
+                        <li><a class="hover:bg-[#B9FF66]">About us</a></li>
+                        <li><a class="hover:bg-[#B9FF66]">Services</a></li>
+                        <li><a class="hover:bg-[#B9FF66]">Use Cases</a></li>
+                        <li><a class="hover:bg-[#B9FF66]">Pricing</a></li>
+                        <li><a class="hover:bg-[#B9FF66]">Blog</a></li>
+                    </ul>
+                    <div class="navbar-center border-transparent">
+                        <a
+                            class="btn text-[black] bg-transparent border-[2px] 2xl:text-[20px] xl:text-[18px] text-[17px] h-[5rem] 2xl:w-[15rem] xl:w-[12rem] w-[11rem] hover:font-[600] hover:bg-[#B9FF66]">Request
+                            a quote</a>
                     </div>
                 </div>
+
+                <div class="dropdown lg:hidden relative">
+                    <!-- Checkbox to toggle menu -->
+                    <input type="checkbox" id="menu-toggle" class="hidden peer" />
+                    
+                    <!-- Label with SVG icons for toggle -->
+                    <label for="menu-toggle" role="button" class="btn btn-ghost">
+                        <!-- Hamburger icon (shows when menu is closed) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            class="inline-block text-[black] sm:h-[2.8rem] h-[1.9rem] w-[1.9rem] sm:w-[2.8rem] stroke-current peer-checked:hidden">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        
+                        <!-- Close icon (shows when menu is open) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            class=" text-[black] sm:h-[2.8rem] h-[1.9rem] w-[1.9rem] sm:w-[2.8rem] stroke-current hidden peer-checked:inline-block">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </label>
+                    
+                    <!-- Dropdown menu (visible when checkbox is checked) -->
+                    <ul class="absolute right-0 mt-2 bg-[black] shadow-[-15px_15px_25px_#B9FF66] flex-col items-center  justify-center
+                               rounded-box z-[10] sm:w-[45vw] w-[55vw] sm:h-[58vh] h-[52vh] p-5 sm:leading-[5rem] leading-[4rem] font-[600] 
+                               hidden peer-checked:flex">
+                        <li class="hover:bg-[#B9FF66] w-full text-center text-[white] hover:text-[black]">
+                            <a class="sm:text-[25px] text-[19px]">About us</a>
+                        </li>
+                        <li class="hover:bg-[#B9FF66] w-full text-center text-[white] hover:text-[black]">
+                            <a class="sm:text-[25px] text-[19px]">Services</a>
+                        </li>
+                        <li class="hover:bg-[#B9FF66] w-full text-center text-[white] hover:text-[black]">
+                            <a class="sm:text-[25px] text-[19px]">Use Cases</a>
+                        </li>
+                        <li class="hover:bg-[#B9FF66] w-full text-center text-[white] hover:text-[black]">
+                            <a class="sm:text-[25px] text-[19px]">Pricing</a>
+                        </li>
+                        <li class="hover:bg-[#B9FF66] w-full text-center text-[white] hover:text-[black]">
+                            <a class="sm:text-[25px] text-[19px]">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                
+                
             </div>
         </nav>
 
-        <div class="w-[100%] flex justify-center items-center">
-            <div class="hero bg-[white] min-h-screen w-[80%]">
-                <div class="hero-content flex-col lg:flex-row-reverse justify-between">
-                    <img src="desktop/cover.png" class="rounded-lg w-[45%]" />
-                    <div class="w-[44%]">
-                        <h1 class="text-5xl font-[600]">Navigating the digital landscape for success</h1>
-                        <p class="py-6">
+        <div class="w-[100%] flex justify-center items-center bg-[white]">
+            <div class="hero w-[85%] py-[3%]">
+                <div class="hero-content flex-col lg:flex-row-reverse justify-between max-w-[100%]">
+                    <img src="desktop/cover.png" class="rounded-lg w-[45%] lg:flex hidden" />
+                    <div class="lg:w-[40%] sm:w-[90%] w-[96%]">
+                        <h1
+                            class="sm:text-[65px] text-[42px] font-[600] space-grotesk-nr text-[black] lg:pb-0 pb-[10%]">
+                            Navigating the digital
+                            landscape for
+                            success</h1>
+                        <div class="lg:hidden flex self-center w-[100%] justify-center items-center">
+                            <img src="desktop/cover.png" class="rounded-lg w-[100%]" />
+                        </div>
+                        <p
+                            class="py-[6%] font-[300] space-grotesk-nr text-[black] sm:text-[22px] text-[18px] xl:w-[85%] w-[97%]">
                             Our digital marketing agency helps businesses grow and succeed online through a range of
                             services including SEO, PPC, social media marketing, and content creation.
                         </p>
-                        <button class="btn btn-primary bg-[#191A23] border-transparent">Book a consultation</button>
+                        <button
+                            class="btn btn-primary rounded-[15px] xl:w-[49%] lg:w-[66%] w-[100%] sm:h-[5rem] h-[4rem] sm:text-[22px] text-[19px] font-[300] bg-[#191A23] hover:bg-[#B9FF66] hover:text-[black] hover:font-[600] hover:border-[black] border-transparent text-[white] space-grotesk-nr">Book
+                            a
+                            consultation</button>
                     </div>
                 </div>
             </div>
         </div>
 
-
     </header>
 
+
     <main>
-        <section class="one w-[100%] flex justify-center items-center py-[3%]">
-            <div class="grid grid-cols-6 justify-items-center w-[80%]">
-                <img src="desktop/amazon.png" alt="" class="w-[58%]">
-                <img src="desktop/dribble.png" alt="" class="w-[58%]">
-                <img src="desktop/hubspot.png" alt="" class="w-[58%]">
-                <img src="desktop/notion.png" alt="" class="w-[58%]">
-                <img src="desktop/netflix.png" alt="" class="w-[55%]">
-                <img src="desktop/zoom.png" alt="" class="w-[55%]">
+        <section class="one w-[100%] flex justify-center items-center sm:py-[2%] py-[5%] bg-[white] border-none">
+            <div class="grid sm:grid-cols-6 grid-cols-3 sm:gap-y-0 gap-y-[12%] justify-items-center w-[90%]">
+                <img src="desktop/amazon.png" alt="" class="w-[57%] grayscale hover:filter-none">
+                <img src="desktop/dribble.png" alt="" class="w-[57%] grayscale hover:filter-none">
+                <img src="desktop/hubspot.png" alt="" class="w-[57%] grayscale hover:filter-none">
+                <img src="desktop/notion.png" alt="" class="w-[57%] grayscale hover:filter-none">
+                <img src="desktop/netflix.png" alt="" class="w-[54%] grayscale hover:filter-none">
+                <img src="desktop/zoom.png" alt="" class="w-[54%] grayscale hover:filter-none">
             </div>
         </section>
 
-        <section class=" two w-[100%] flex justify-center items-center">
-            <div class="con w-[80%]">
-                <div class="up flex items-center gap-[5%] ">
-                    <h1 class="text-[36px] font-[600] bg-[#B9FF66] w-[20%] text-center">Case Studies</h1>
-                    <p class="w-[50%] text-[17px]">Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies</p>
+        <section
+            class=" two w-[100%] flex justify-center items-center bg-[white] lg:pb-0 sm:pb-[8%] pb-[19%] sm:pt-0 pt-[6%]">
+            <div class="con w-[90%] py-[5%] flex justify-center items-center flex-col">
+                <div class="up flex md:flex-row flex-col items-center gap-[3%] w-[93%] py-[6%]">
+                    <h1
+                        class="lg:text-[45px] sm:text-[38px] text-[27px] font-[500] bg-[#B9FF66] xl:w-[22%] lg:w-[35%] md:w-[42%] sm:w-[50%] w-[69%] rounded-[8px] text-center text-[black] space-grotesk-nr">
+                        Case Studies</h1>
+                    <p
+                        class="xl:w-[36.7%] md:w-[50%] w-[100%] md:py-0 py-[4%] lg:text-[21px] sm:text-[18px] text-[16px] md:text-left text-center text-[black] space-grotesk-nr">
+                        Explore
+                        Real-Life Examples of Our Proven Digital Marketing Success
+                        through Our Case Studies</p>
                 </div>
-                <div class="dwn w-[80%] bg-[black] text-[white] flex">
-                    <div>
-                        <p>For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.</p>
-                        <div class="flex">
-                            <p>Learn more</p>
-                            <img src="desktop/Icon.png" alt="">
-                        </div>
-                    </div>
-                    <div>
-                        <p>For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.</p>
-                        <div class="flex">
-                            <p>Learn more</p>
-                            <img src="desktop/Icon.png" alt="">
-                        </div>
-                    </div>
-                    <div>
-                        <p>For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.</p>
-                        <div class="flex">
-                            <p>Learn more</p>
-                            <img src="desktop/Icon.png" alt="">
+
+                <div
+                    class="dwn w-[92%] lg:bg-[#191A23] bg-[white] text-[white] lg:flex grid justify-items-center sm:gap-y-[5%] gap-y-[4%] rounded-[30px] py-[5%] px-[4.6%]">
+
+                    <div
+                        class="lg:w-[60%] sm:w-[80%] w-[95%] pt-[0.6%] pb-[2.6%] bg-[#191A23] rounded-[42px] lg:px-0 px-[10%]">
+                        <p class="sm:text-[21px] text-[18px] space-grotesk-nr font-[200] w-[98%] lg:pt-0 pt-[15%]">For a
+                            local restaurant, we implemented a
+                            targeted PPC campaign that resulted in a 50%
+                            increase in website traffic and a 25% increase in sales.</p>
+                        <div class="flex items-center gap-[4%] pt-[5%] lg:pb-0 pb-[15%]">
+                            <p class="text-[#B9FF66] sm:text-[24px] text-[18px] space-grotesk-nr">Learn more</p>
+                            <img src="desktop/Icon.png" alt="" class="sm:h-[24px] h-[18px] sm:w-[24px] w-[18px]">
                         </div>
                     </div>
 
+                    <div class="lg:flex hidden px-[4.6%]">
+                        <div class="divider divider-horizontal bg-[white] w-[2px]"></div>
+                    </div>
+
+                    <div
+                        class="lg:w-[60%] sm:w-[80%] w-[95%] pt-[0.6%] pb-[2.6%] bg-[#191A23] rounded-[42px] lg:px-0 px-[10%]">
+                        <p class="sm:text-[21px] text-[18px] space-grotesk-nr font-[200] w-[98%] lg:pt-0 pt-[15%]">For a
+                            B2B software company, we developed an SEO strategy that resulted in a first page ranking for
+                            key keywords and a 200% increase in organic traffic.</p>
+                        <div class="flex items-center gap-[4%] pt-[5%] lg:pb-0 pb-[15%]">
+                            <p class="text-[#B9FF66] sm:text-[24px] text-[18px] space-grotesk-nr">Learn more</p>
+                            <img src="desktop/Icon.png" alt="" class="sm:h-[24px] h-[18px] sm:w-[24px] w-[18px]">
+                        </div>
+                    </div>
+
+                    <div class="lg:flex hidden px-[4.6%]">
+                        <div class="divider divider-horizontal bg-[white] w-[2px]"></div>
+                    </div>
+
+                    <div
+                        class="lg:w-[60%] sm:w-[80%] w-[95%] pt-[0.6%] pb-[2.6%] bg-[#191A23] rounded-[42px] lg:px-0 px-[10%]">
+                        <p class="sm:text-[21px] text-[18px] space-grotesk-nr font-[200] w-[98%] lg:pt-0 pt-[15%]">For a
+                            national retail chain, we created a social media marketing campaign that increased followers
+                            by 25% and generated a 20% increase in online sales.</p>
+                        <div class="flex items-center gap-[4%] pt-[5%] lg:pb-0 pb-[15%]">
+                            <p class="text-[#B9FF66] sm:text-[24px] text-[18px] space-grotesk-nr">Learn more</p>
+                            <img src="desktop/Icon.png" alt="" class="sm:h-[24px] h-[18px] sm:w-[24px] w-[18px]">
+                        </div>
+                    </div>
                 </div>
             </div>
 
 
         </section>
 
+        <section
+            class=" three w-[100%] flex justify-center items-center bg-[white] lg:pb-0 sm:pb-[8%] pb-[12%] sm:pt-0 pt-[1%]">
+            <div class="con w-[90%] py-[1%] flex justify-center items-center flex-col">
+                <div class="up flex lg:flex-row flex-col items-center gap-[3%] w-[93%] py-[6%]">
+                    <h1
+                        class="xl:text-[42.5px] lg:text-[40px] md:text-[34px] text-[27px] font-[500] bg-[#B9FF66] 2xl:w-[33%] xl:w-[40%] lg:w-[52%] w-[55%] rounded-[8px] text-center text-[black] space-grotesk-nr">
+                        Our Working Process </h1>
+                    <p
+                        class="xl:w-[36.7%] lg:w-[50%] w-[100%] lg:py-0 py-[4%] lg:text-[21px] sm:text-[18px] text-[16px] lg:text-left text-center text-[black] space-grotesk-nr">
+                        Step-by-Step Guide to Achieving Your Business Goals</p>
+                </div>
 
+                <div class="dwn w-[93%] grid gap-y-[1%] space-grotesk-nr py-[1%]">
+                    <div
+                        class="collapse rounded-[50px] p-[4.5%] bg-[#B9FF66] border-[2px] border-[#191A23] shadow-[0px_9px_1px_#191A23] mb-[3%] text-[black]">
+                        <input type="checkbox" name="my-accordion-3" class="peer" />
+                        <div
+                            class="collapse-title lg:text-[38px] sm:text-[30px] text-[15px] font-medium flex justify-between items-center">
+                            <span class="flex items-center w-[100%] sm:pr-0 pr-[20%]">
+                                <span
+                                    class="lg:text-[70px] sm:text-[58px] text-[38px] lg:pr-[10%] sm:pr-[6%] pr-[3%]">01</span>
+                                Consultation
+                            </span>
+                            <label class="swap">
+                                <svg class="swap-off sm:w-[58px] w-[20px]" xmlns="http://www.w3.org/2000/svg" width="58"
+                                    height="59" viewBox="0 0 58 59" fill="none">
+                                    <circle cx="29" cy="29.5" r="28.5" fill="#F3F3F3" stroke="#191A23" />
+                                    <path
+                                        d="M25.6 41.58V31.86H16V26.22H25.6V16.5H31.48V26.22H41.08V31.86H31.48V41.58H25.6Z"
+                                        fill="#191A23" />
+                                </svg>
+                                <!-- <svg class="swap-on" xmlns="http://www.w3.org/2000/svg" width="58" height="59"
+                                    viewBox="0 0 58 59" fill="none">
+                                    <circle cx="29" cy="29.5" r="28.5" fill="#F3F3F3" stroke="#191A23" />
+                                    <path d="M20 32.14V26.5H37.76V32.14H20Z" fill="black" />
+                                </svg> -->
+                            </label>
+                        </div>
+                        <div class="collapse-content">
+                            <div class="flex w-full flex-col">
+                                <div class="divider bg-[black] h-[2px]"></div>
+                            </div>
+                            <p class="sm:text-[22px] text-[15px] pt-[1%] sm:pb-0 pb-[10%]">During the initial
+                                consultation, we will discuss your
+                                business goals
+                                and objectives, target audience, and current marketing
+                                efforts. This will allow us to understand your needs and tailor our services to best fit
+                                your requirements.</p>
+                        </div>
+                    </div>
 
+                    <div
+                        class="collapse rounded-[50px] p-[4.5%] bg-[#B9FF66] border-[2px] border-[#191A23] shadow-[0px_9px_1px_#191A23] mb-[3%] text-[black]">
+                        <input type="checkbox" name="my-accordion-3" class="peer" />
+                        <div
+                            class="collapse-title lg:text-[38px] sm:text-[30px] text-[15px] font-medium flex justify-between items-center">
+                            <span class="flex items-center w-[100%] sm:pr-0 pr-[20%]">
+                                <span
+                                    class="lg:text-[70px] sm:text-[58px] text-[38px] lg:pr-[10%] sm:pr-[6%] pr-[3%]">02</span>
+                                Research and Strategy Development
+                            </span>
+                            <label class="swap">
+                                <svg class="swap-off sm:w-[58px] w-[20px]" xmlns="http://www.w3.org/2000/svg" width="58"
+                                    height="59" viewBox="0 0 58 59" fill="none">
+                                    <circle cx="29" cy="29.5" r="28.5" fill="#F3F3F3" stroke="#191A23" />
+                                    <path
+                                        d="M25.6 41.58V31.86H16V26.22H25.6V16.5H31.48V26.22H41.08V31.86H31.48V41.58H25.6Z"
+                                        fill="#191A23" />
+                                </svg>
+                                <!-- <svg class="swap-on" xmlns="http://www.w3.org/2000/svg" width="58" height="59"
+                                    viewBox="0 0 58 59" fill="none">
+                                    <circle cx="29" cy="29.5" r="28.5" fill="#F3F3F3" stroke="#191A23" />
+                                    <path d="M20 32.14V26.5H37.76V32.14H20Z" fill="black" />
+                                </svg> -->
+                            </label>
+                        </div>
+                        <div class="collapse-content">
+                            <div class="flex w-full flex-col">
+                                <div class="divider bg-[black] h-[2px]"></div>
+                            </div>
+                            <p class="sm:text-[22px] text-[15px] pt-[1%] sm:pb-0 pb-[10%]">During the initial
+                                consultation, we will discuss your
+                                business goals
+                                and objectives, target audience, and current marketing
+                                efforts. This will allow us to understand your needs and tailor our services to best fit
+                                your requirements.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="collapse rounded-[50px] p-[4.5%] bg-[#B9FF66] border-[2px] border-[#191A23] shadow-[0px_9px_1px_#191A23] mb-[3%] text-[black]">
+                        <input type="checkbox" name="my-accordion-3" class="peer" />
+                        <div
+                            class="collapse-title lg:text-[38px] sm:text-[30px] text-[15px] font-medium flex justify-between items-center">
+                            <span class="flex items-center w-[100%] sm:pr-0 pr-[20%]">
+                                <span
+                                    class="lg:text-[70px] sm:text-[58px] text-[38px] lg:pr-[10%] sm:pr-[6%] pr-[3%]">03</span>
+                                Implementation
+                            </span>
+                            <label class="swap">
+                                <svg class="swap-off sm:w-[58px] w-[20px]" xmlns="http://www.w3.org/2000/svg" width="58"
+                                    height="59" viewBox="0 0 58 59" fill="none">
+                                    <circle cx="29" cy="29.5" r="28.5" fill="#F3F3F3" stroke="#191A23" />
+                                    <path
+                                        d="M25.6 41.58V31.86H16V26.22H25.6V16.5H31.48V26.22H41.08V31.86H31.48V41.58H25.6Z"
+                                        fill="#191A23" />
+                                </svg>
+                                <!-- <svg class="swap-on" xmlns="http://www.w3.org/2000/svg" width="58" height="59"
+                                    viewBox="0 0 58 59" fill="none">
+                                    <circle cx="29" cy="29.5" r="28.5" fill="#F3F3F3" stroke="#191A23" />
+                                    <path d="M20 32.14V26.5H37.76V32.14H20Z" fill="black" />
+                                </svg> -->
+                            </label>
+                        </div>
+                        <div class="collapse-content">
+                            <div class="flex w-full flex-col">
+                                <div class="divider bg-[black] h-[2px]"></div>
+                            </div>
+                            <p class="sm:text-[22px] text-[15px] pt-[1%] sm:pb-0 pb-[10%]">During the initial
+                                consultation, we will discuss your
+                                business goals
+                                and objectives, target audience, and current marketing
+                                efforts. This will allow us to understand your needs and tailor our services to best fit
+                                your requirements.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="collapse rounded-[50px] p-[4.5%] bg-[#B9FF66] border-[2px] border-[#191A23] shadow-[0px_9px_1px_#191A23] mb-[3%] text-[black]">
+                        <input type="checkbox" name="my-accordion-3" class="peer" />
+                        <div
+                            class="collapse-title lg:text-[38px] sm:text-[30px] text-[15px] font-medium flex justify-between items-center">
+                            <span class="flex items-center w-[100%] sm:pr-0 pr-[20%]">
+                                <span
+                                    class="lg:text-[70px] sm:text-[58px] text-[38px] lg:pr-[10%] sm:pr-[6%] pr-[3%]">04</span>
+                                Monitoring and Optimization
+                            </span>
+                            <label class="swap">
+                                <svg class="swap-off sm:w-[58px] w-[20px]" xmlns="http://www.w3.org/2000/svg" width="58"
+                                    height="59" viewBox="0 0 58 59" fill="none">
+                                    <circle cx="29" cy="29.5" r="28.5" fill="#F3F3F3" stroke="#191A23" />
+                                    <path
+                                        d="M25.6 41.58V31.86H16V26.22H25.6V16.5H31.48V26.22H41.08V31.86H31.48V41.58H25.6Z"
+                                        fill="#191A23" />
+                                </svg>
+                                <!-- <svg class="swap-on" xmlns="http://www.w3.org/2000/svg" width="58" height="59"
+                                    viewBox="0 0 58 59" fill="none">
+                                    <circle cx="29" cy="29.5" r="28.5" fill="#F3F3F3" stroke="#191A23" />
+                                    <path d="M20 32.14V26.5H37.76V32.14H20Z" fill="black" />
+                                </svg> -->
+                            </label>
+                        </div>
+                        <div class="collapse-content">
+                            <div class="flex w-full flex-col">
+                                <div class="divider bg-[black] h-[2px]"></div>
+                            </div>
+                            <p class="sm:text-[22px] text-[15px] pt-[1%] sm:pb-0 pb-[10%]">During the initial
+                                consultation, we will discuss your
+                                business goals
+                                and objectives, target audience, and current marketing
+                                efforts. This will allow us to understand your needs and tailor our services to best fit
+                                your requirements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+
+    <footer class="pt-[6%] bg-[white]">
+        <section class="ftr w-[100%] bg-[white] flex flex-col justify-center items-center space-grotesk-nr">
+            <div
+                class="container sm:w-[85%] w-[100%] sm:rounded-t-[45px] bg-[#191A23] p-[4%]">
+                <div class="grid xl:gap-y-[8%] xl:grid-cols-7 grid-cols-1 py-[2%] text-[white]">
+                    <div
+                        class="xl:order-1 order-1  xl:col-span-2 xl:pb-[8%] pb-[5%] xl:block flex justify-center">
+                        <img src="desktop/logo-small.png" alt="" class="xl:w-[14rem] w-[15rem]">
+                    </div>
+                    <div class="xl:order-2 order-2 xl:col-span-4 xl:pb-[8%]">
+                        <ul class="flex xl:flex-row flex-col xl:justify-around justify-center items-center text-[19px]">
+                            <li class="xl:pb-0 pb-[2.3%]"><a class="text-[22px] xl:underline">About us</a></li>
+                            <li class="xl:pb-0 pb-[2.3%]"><a class="text-[22px] xl:underline">Services</a></li>
+                            <li class="xl:pb-0 pb-[2.3%]"><a class="text-[22px] xl:underline">Use Cases</a></li>
+                            <li class="xl:pb-0 pb-[8%]"><a class="text-[22px] xl:underline">Pricing</a></li>
+                            <li class="xl:pb-0 pb-[2.3%] xl:flex hidden"><a class="text-[22px] xl:underline">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="flex xl:order-3 order-5 xl:justify-end justify-center xl:gap-[10%] gap-[3%] xl:pb-[8%] xl:pt-0 pt-[6%]">
+                        <img src="desktop/social-linkedin.png" alt="" class="w-[2rem] h-[2rem]">
+                        <img src="desktop/social-fb.png" alt="" class="w-[2rem] h-[2rem]">
+                        <img src="desktop/social-twitter.png" alt="" class="w-[2rem] h-[2rem]">
+                    </div>
+                    <div
+                        class="xl:order-4 order-3 xl:col-span-3 xl:justify-items-start justify-items-center">
+                        <p
+                            class="sm:text-[27px] text-[25px] bg-[#B9FF66] xl:w-[38%] md:w-[27%] sm:w-[32%] w-[42%] text-[black] rounded-[8px] pl-[1%] xl:text-left text-center">
+                            Contact us:</p>
+                        <p class="sm:text-[22px] text-[20px] xl:pt-[10%] pt-[3.5%]">Email: info@positivus.com</p>
+                        <p class="sm:text-[22px] text-[20px] xl:pt-[4%] pt-[2.2%]">Phone: 555-567 8901</p>
+                        <p
+                            class="sm:text-[22px] text-[20px] xl:pt-[4%] pt-[2.2%] xl:text-left text-center xl:pb-0 pb-[7%]">
+                            Address:
+                            1234 Main St <br> Moonstone City, Stardust State 12345</p>
+                    </div>
+                    <div
+                        class="xl:order-5 order-4 xl:col-span-4 flex justify-center items-center w-[100%] rounded-[20px] bg-[#292A32]">
+                        <fieldset class="form-control w-[90%] md:py-0 py-[5%]">
+                            <div
+                                class="flex md:flex-row flex-col md:gap-0 gap-[10%] items-center justify-around md:h-[10rem] h-[12rem]">
+                                <input type="text" placeholder="Email"
+                                    class="input join-item sm:text-[24px] text-[21px] placeholder:text-[white] md:w-[50%] w-[90%] md:h-[60%] h-[50%] pl-[5%] md:rounded-none md:rounded-l-[15px] rounded-[12px] border-[white] border-[1px]" />
+                                <button
+                                    class="btn btn-primary join-item sm:text-[26px] text-[20px] bg-[#B9FF66] md:w-[45%] w-[90%] md:h-[60%] h-[45%] font-[300] border-transparent md:rounded-none md:rounded-r-[15px] rounded-[12px] hover:border-transparent hover:font-[600] hover:bg-[#B9FF66]">Subscribe
+                                    to news</button>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div class="flex justify-center items-center py-[4.5%] w-[100%] bg-[#191A23]">
+                    <div class="divider bg-[white] h-[1.7px] w-[100%]"></div>
+                </div>
+
+                <footer
+                    class="footer footer-start text-[white] sm:text-[20px] text-[17px] bg-[#191A23] font-[300] flex justify-center items-center w-[100%]">
+                    <aside class="w-[100%] flex md:flex-row flex-col items-center gap-[7%]">
+                        <p class="md:pb-0 pb-[4%] text-center">© 2023 Positivus. All Rights Reserved.</p>
+                        <p class="sm:underline">Privacy Policy</p>
+                    </aside>
+                </footer>
+
+            </div>
+        </section>
+    </footer>
 
 
 
