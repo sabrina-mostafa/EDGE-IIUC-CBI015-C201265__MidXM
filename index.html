@@ -28,14 +28,13 @@
 <body>
 
     <header>
-        <nav class="space-grotesk-nr lg:py-[5%] md:py-[6%] sm:py-[7%] py-[12%] w-[100] bg-[white] flex justify-center items-center">
+        <nav
+            class="space-grotesk-nr lg:py-[5%] md:py-[6%] sm:py-[7%] py-[12%] w-[100] bg-[white] flex justify-center items-center">
             <div
                 class="navbar shadow-[0px_7px_10px_#292A32] bg-[white] 2xl:w-[90%] lg:w-[92%] w-[90%] py-[0.5%] justify-between items-center">
                 <div class="navbar-start xl:w-[22%] w-[16%] lg:mr-[-20%]">
-                    <a
-                        class="btn btn-ghost 2xl:w-[17rem] xl:w-[14rem] lg:w-[9rem] sm:w-[12rem] w-[10rem]">
-                        <img src="desktop/logo-big.png" alt=""
-                            class="w-[100%] xl:mr-[20%] lg:mr-[30%] mr-[20%]">
+                    <a class="btn btn-ghost 2xl:w-[17rem] xl:w-[14rem] lg:w-[9rem] sm:w-[12rem] w-[10rem]">
+                        <img src="desktop/logo-big.png" alt="" class="w-[100%] xl:mr-[20%] lg:mr-[30%] mr-[20%]">
                     </a>
                 </div>
 
@@ -58,22 +57,24 @@
                 <div class="dropdown lg:hidden relative">
                     <!-- Checkbox to toggle menu -->
                     <input type="checkbox" id="menu-toggle" class="hidden peer" />
-                    
+
                     <!-- Label with SVG icons for toggle -->
                     <label for="menu-toggle" role="button" class="btn btn-ghost">
                         <!-- Hamburger icon (shows when menu is closed) -->
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             class="inline-block text-[black] sm:h-[2.8rem] h-[1.9rem] w-[1.9rem] sm:w-[2.8rem] stroke-current peer-checked:hidden">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
-                        
+
                         <!-- Close icon (shows when menu is open) -->
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             class=" text-[black] sm:h-[2.8rem] h-[1.9rem] w-[1.9rem] sm:w-[2.8rem] stroke-current hidden peer-checked:inline-block">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
                         </svg>
                     </label>
-                    
+
                     <!-- Dropdown menu (visible when checkbox is checked) -->
                     <ul class="absolute right-0 mt-2 bg-[black] shadow-[-15px_15px_25px_#B9FF66] flex-col items-center  justify-center
                                rounded-box z-[10] sm:w-[45vw] w-[55vw] sm:h-[58vh] h-[52vh] p-5 sm:leading-[5rem] leading-[4rem] font-[600] 
@@ -95,9 +96,9 @@
                         </li>
                     </ul>
                 </div>
-                
-                
-                
+
+
+
             </div>
         </nav>
 
@@ -219,12 +220,12 @@
                         Step-by-Step Guide to Achieving Your Business Goals</p>
                 </div>
 
-                <div class="dwn w-[93%] grid gap-y-[1%] space-grotesk-nr py-[1%]">
+                <div class="dwn w-[93%] grid space-grotesk-nr">
                     <div
-                        class="collapse rounded-[50px] p-[4.5%] bg-[#F3F3F3]  hover:bg-[#B9FF66] border-[2px] border-[#191A23] shadow-[0px_9px_1px_#191A23] mb-[3%] text-[black]">
-                        <input type="checkbox" name="my-accordion-3" class="peer" />
+                        class="bg-[#F3F3F3] collapse rounded-[50px] text-[black] border-[2px] border-[#191A23] shadow-[0px_9px_1px_#191A23] sm:my-[3%] my-[5%]">
+                        <input type="checkbox" class="peer" />
                         <div
-                            class="collapse-title lg:text-[38px] sm:text-[30px] text-[15px] font-medium flex justify-between items-center">
+                            class="collapse-title p-[7%] lg:text-[38px] sm:text-[30px] text-[15px] font-medium flex justify-between items-center bg-[#F3F3F3] peer-checked:bg-[#B9FF66] peer-checked:text-secondary-content">
                             <span class="flex items-center w-[100%] sm:pr-0 pr-[20%]">
                                 <span
                                     class="lg:text-[70px] sm:text-[58px] text-[38px] lg:pr-[10%] sm:pr-[6%] pr-[3%]">01</span>
@@ -245,11 +246,12 @@
                                 </svg> -->
                             </label>
                         </div>
-                        <div class="collapse-content">
+                        <div
+                            class="collapse-content px-[6%] peer-checked:pb-[8%] bg-[#F3F3F3] peer-checked:bg-[#B9FF66] peer-checked:text-secondary-content">
                             <div class="flex w-full flex-col">
                                 <div class="divider bg-[black] h-[2px]"></div>
                             </div>
-                            <p class="sm:text-[22px] text-[15px] pt-[1%] sm:pb-0 pb-[10%]">During the initial
+                            <p class="sm:text-[22px] text-[15px] pt-[1%] sm:pb-0 pb-[3%]">During the initial
                                 consultation, we will discuss your
                                 business goals
                                 and objectives, target audience, and current marketing
@@ -259,14 +261,14 @@
                     </div>
 
                     <div
-                        class="collapse rounded-[50px] p-[4.5%] bg-[#F3F3F3]  hover:bg-[#B9FF66] border-[2px] border-[#191A23] shadow-[0px_9px_1px_#191A23] mb-[3%] text-[black]">
-                        <input type="checkbox" name="my-accordion-3" class="peer" />
+                        class="bg-[#F3F3F3] collapse rounded-[50px] text-[black] border-[2px] border-[#191A23] shadow-[0px_9px_1px_#191A23] sm:my-[3%] my-[5%]">
+                        <input type="checkbox" class="peer" />
                         <div
-                            class="collapse-title lg:text-[38px] sm:text-[30px] text-[15px] font-medium flex justify-between items-center">
+                            class="collapse-title p-[7%] lg:text-[38px] sm:text-[30px] text-[15px] font-medium flex justify-between items-center bg-[#F3F3F3] peer-checked:bg-[#B9FF66] peer-checked:text-secondary-content">
                             <span class="flex items-center w-[100%] sm:pr-0 pr-[20%]">
                                 <span
                                     class="lg:text-[70px] sm:text-[58px] text-[38px] lg:pr-[10%] sm:pr-[6%] pr-[3%]">02</span>
-                                Research and Strategy Development
+                                    Research and Strategy Development
                             </span>
                             <label class="swap">
                                 <svg class="swap-off sm:w-[58px] w-[20px]" xmlns="http://www.w3.org/2000/svg" width="58"
@@ -283,11 +285,12 @@
                                 </svg> -->
                             </label>
                         </div>
-                        <div class="collapse-content">
+                        <div
+                            class="collapse-content px-[6%] peer-checked:pb-[8%] bg-[#F3F3F3] peer-checked:bg-[#B9FF66] peer-checked:text-secondary-content">
                             <div class="flex w-full flex-col">
                                 <div class="divider bg-[black] h-[2px]"></div>
                             </div>
-                            <p class="sm:text-[22px] text-[15px] pt-[1%] sm:pb-0 pb-[10%]">During the initial
+                            <p class="sm:text-[22px] text-[15px] pt-[1%] sm:pb-0 pb-[3%]">During the initial
                                 consultation, we will discuss your
                                 business goals
                                 and objectives, target audience, and current marketing
@@ -297,14 +300,14 @@
                     </div>
 
                     <div
-                        class="collapse rounded-[50px] p-[4.5%] bg-[#F3F3F3]  hover:bg-[#B9FF66] border-[2px] border-[#191A23] shadow-[0px_9px_1px_#191A23] mb-[3%] text-[black]">
-                        <input type="checkbox" name="my-accordion-3" class="peer" />
+                        class="bg-[#F3F3F3] collapse rounded-[50px] text-[black] border-[2px] border-[#191A23] shadow-[0px_9px_1px_#191A23] sm:my-[3%] my-[5%]">
+                        <input type="checkbox" class="peer" />
                         <div
-                            class="collapse-title lg:text-[38px] sm:text-[30px] text-[15px] font-medium flex justify-between items-center">
+                            class="collapse-title p-[7%] lg:text-[38px] sm:text-[30px] text-[15px] font-medium flex justify-between items-center bg-[#F3F3F3] peer-checked:bg-[#B9FF66] peer-checked:text-secondary-content">
                             <span class="flex items-center w-[100%] sm:pr-0 pr-[20%]">
                                 <span
                                     class="lg:text-[70px] sm:text-[58px] text-[38px] lg:pr-[10%] sm:pr-[6%] pr-[3%]">03</span>
-                                Implementation
+                                    Implementation
                             </span>
                             <label class="swap">
                                 <svg class="swap-off sm:w-[58px] w-[20px]" xmlns="http://www.w3.org/2000/svg" width="58"
@@ -321,11 +324,12 @@
                                 </svg> -->
                             </label>
                         </div>
-                        <div class="collapse-content">
+                        <div
+                            class="collapse-content px-[6%] peer-checked:pb-[8%] bg-[#F3F3F3] peer-checked:bg-[#B9FF66] peer-checked:text-secondary-content">
                             <div class="flex w-full flex-col">
                                 <div class="divider bg-[black] h-[2px]"></div>
                             </div>
-                            <p class="sm:text-[22px] text-[15px] pt-[1%] sm:pb-0 pb-[10%]">During the initial
+                            <p class="sm:text-[22px] text-[15px] pt-[1%] sm:pb-0 pb-[3%]">During the initial
                                 consultation, we will discuss your
                                 business goals
                                 and objectives, target audience, and current marketing
@@ -335,14 +339,14 @@
                     </div>
 
                     <div
-                        class="collapse rounded-[50px] p-[4.5%] bg-[#F3F3F3]  hover:bg-[#B9FF66] border-[2px] border-[#191A23] shadow-[0px_9px_1px_#191A23] mb-[3%] text-[black]">
-                        <input type="checkbox" name="my-accordion-3" class="peer" />
+                        class="bg-[#F3F3F3] collapse rounded-[50px] text-[black] border-[2px] border-[#191A23] shadow-[0px_9px_1px_#191A23] sm:my-[3%] my-[5%]">
+                        <input type="checkbox" class="peer" />
                         <div
-                            class="collapse-title lg:text-[38px] sm:text-[30px] text-[15px] font-medium flex justify-between items-center">
+                            class="collapse-title p-[7%] lg:text-[38px] sm:text-[30px] text-[15px] font-medium flex justify-between items-center bg-[#F3F3F3] peer-checked:bg-[#B9FF66] peer-checked:text-secondary-content">
                             <span class="flex items-center w-[100%] sm:pr-0 pr-[20%]">
                                 <span
                                     class="lg:text-[70px] sm:text-[58px] text-[38px] lg:pr-[10%] sm:pr-[6%] pr-[3%]">04</span>
-                                Monitoring and Optimization
+                                    Monitoring and Optimization
                             </span>
                             <label class="swap">
                                 <svg class="swap-off sm:w-[58px] w-[20px]" xmlns="http://www.w3.org/2000/svg" width="58"
@@ -359,11 +363,12 @@
                                 </svg> -->
                             </label>
                         </div>
-                        <div class="collapse-content">
+                        <div
+                            class="collapse-content px-[6%] peer-checked:pb-[8%] bg-[#F3F3F3] peer-checked:bg-[#B9FF66] peer-checked:text-secondary-content">
                             <div class="flex w-full flex-col">
                                 <div class="divider bg-[black] h-[2px]"></div>
                             </div>
-                            <p class="sm:text-[22px] text-[15px] pt-[1%] sm:pb-0 pb-[10%]">During the initial
+                            <p class="sm:text-[22px] text-[15px] pt-[1%] sm:pb-0 pb-[3%]">During the initial
                                 consultation, we will discuss your
                                 business goals
                                 and objectives, target audience, and current marketing
@@ -379,12 +384,11 @@
 
     <footer class="pt-[6%] bg-[white]">
         <section class="ftr w-[100%] bg-[white] flex flex-col justify-center items-center space-grotesk-nr">
-            <div
-                class="container sm:w-[85%] w-[100%] sm:rounded-t-[45px] bg-[#191A23] p-[4%]">
+            <div class="container sm:w-[85%] w-[100%] sm:rounded-t-[45px] bg-[#191A23] p-[4%]">
                 <div class="grid xl:gap-y-[8%] xl:grid-cols-7 grid-cols-1 py-[2%] text-[white]">
-                    <div
-                        class="xl:order-1 order-1  xl:col-span-2 xl:pb-[8%] pb-[5%] xl:block flex justify-center">
-                        <img src="desktop/logo-small.png" alt="" class="xl:w-[14rem] md:w-[15rem] sm:w-[13rem] w-[12rem]">
+                    <div class="xl:order-1 order-1  xl:col-span-2 xl:pb-[8%] pb-[5%] xl:block flex justify-center">
+                        <img src="desktop/logo-small.png" alt=""
+                            class="xl:w-[14rem] md:w-[15rem] sm:w-[13rem] w-[12rem]">
                     </div>
                     <div class="xl:order-2 order-2 xl:col-span-4 xl:pb-[8%]">
                         <ul class="flex xl:flex-row flex-col xl:justify-around justify-center items-center text-[19px]">
@@ -402,8 +406,7 @@
                         <img src="desktop/social-fb.png" alt="" class="w-[2rem] h-[2rem]">
                         <img src="desktop/social-twitter.png" alt="" class="w-[2rem] h-[2rem]">
                     </div>
-                    <div
-                        class="xl:order-4 order-3 xl:col-span-3 flex flex-col xl:items-start items-center">
+                    <div class="xl:order-4 order-3 xl:col-span-3 flex flex-col xl:items-start items-center">
                         <p
                             class="sm:text-[27px] text-[25px] bg-[#B9FF66] xl:w-[38%] md:w-[27%] sm:w-[32%] w-[42%] text-[black] rounded-[8px] pl-[1%] xl:text-left text-center">
                             Contact us:</p>
